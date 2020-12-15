@@ -1,0 +1,98 @@
+.rooms {
+  width: 100%;
+  height: 60rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  .rm {
+    position: relative;
+
+    &--opacity {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    &--price {
+      position: absolute;
+      top: 4rem;
+      right: 0;
+      font-size: 2rem;
+      font-weight: bold;
+      background-color: $color-title;
+      padding: 1rem 2rem;
+      border-top-left-radius: 0.5rem;
+      border-bottom-left-radius: 0.5rem;
+      color: $color-white;
+    }
+
+    &--content {
+      position: absolute;
+      bottom: 10%;
+      left: 10%;
+      max-width: 100%;
+
+      .text {
+        color: $color-white;
+        font-size: 1.8rem;
+        width: 90%;
+      }
+    }
+  }
+
+  &__r1 {
+    background: url(../images/room1.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+
+    @include respond(tab-port) {
+      width: 100%;
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__r2 {
+    background: url(../images/room2.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100%;
+
+    grid-column: 5 / 9;
+    grid-row: 3 / -1;
+
+    @include respond(tab-port) {
+      grid-column: 1 / -1;
+      grid-row: 2;
+    }
+  }
+
+  &__r3 {
+    background: url(../images/room4.jpg) no-repeat;
+    background-size: cover;
+    height: 100%;
+
+    grid-column: 9 / -1;
+    grid-row: 3 / -1;
+
+    @include respond(tab-port) {
+      grid-column: 1 / -1;
+      grid-row: 3;
+    }
+  }
+
+  &__r4 {
+    background: url(../images/room3.png) no-repeat center center;
+    background-size: cover;
+    height: 100%;
+
+    grid-column: 1 / 5;
+
+    @include respond(tab-port) {
+      grid-column: 1 / -1;
+    }
+  }
+}

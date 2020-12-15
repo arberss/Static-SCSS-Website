@@ -1,0 +1,55 @@
+.space {
+  padding: 10rem 8rem;
+  width: 100%;
+
+  @include respond(tab-port) {
+    padding: 8rem 4rem;
+  }
+
+  @include respond(phone) {
+    .heading-primary {
+      font-size: 3.5rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-column-gap: 2rem;
+    grid-row-gap: 4rem;
+    padding: 8rem 0;
+    font-size: 1.8rem;
+
+    &__box {
+      &--photo {
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      &--title {
+        display: flex;
+        justify-content: space-between;
+        margin: 2rem 0;
+
+        .paragraph {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+}

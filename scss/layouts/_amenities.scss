@@ -1,0 +1,26 @@
+.amenities {
+  background-color: $color-title;
+  padding: 10rem 8rem;
+
+  @include respond(tab-port) {
+    padding: 8rem 4rem;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    // grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+
+    &--box {
+      background-color: $color-white;
+      padding: 2rem 3rem;
+
+      .paragraph {
+        font-size: 2rem;
+        margin-top: 2rem;
+        font-weight: bold;
+      }
+    }
+  }
+}

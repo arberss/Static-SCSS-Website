@@ -1,0 +1,61 @@
+.button {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    // padding: 1.8rem 3.5rem;
+    background-color: $color-primary;
+    border: 3px solid $color-primary;
+    border-radius: 0.3rem;
+    color: $color-white;
+    font-size: 1.5rem;
+    transition: 0.4s ease-out;
+    font-weight: bold;
+    text-align: center;
+
+    &:hover {
+      border: 3px solid $color-primary;
+      background-color: $color-white;
+      color: $color-primary;
+
+      transition: 0.4s ease-in-out;
+    }
+  }
+}
+
+.formBtn {
+  &,
+  &:link,
+  &:visited {
+    border: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    // padding: 1.8rem 3.5rem;
+    background-color: $color-primary;
+    border: 3px solid $color-primary;
+    border-radius: 0.3rem;
+    color: $color-white;
+    font-size: 1.5rem;
+    transition: 0.4s ease-out;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      border: 3px solid $color-primary;
+      background-color: $color-white;
+      color: $color-primary;
+
+      transition: 0.4s ease-in-out;
+    }
+  }
+}
+
+.padding-x-small {
+  padding: 1.8rem 1.5rem;
+}
+
+.padding-x-medium {
+  padding: 1.8rem 3.5rem;
+}

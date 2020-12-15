@@ -1,0 +1,147 @@
+.workplace {
+  padding: 10rem 8rem;
+
+  @include respond(tab-port) {
+    padding: 8rem 4rem;
+  }
+
+  &__text {
+    font-size: 1.7rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  &__list {
+    margin: 5rem 0;
+    font-weight: bold;
+    li {
+      display: inline-block;
+      font-size: 3rem;
+      cursor: pointer;
+      border-bottom: 2px solid $color-grey;
+      padding-bottom: 0.8rem;
+      transition: 0.2s ease-out;
+
+      &:first-child {
+        margin-right: 3rem;
+
+        @include respond(tab-port) {
+          margin-bottom: 4rem;
+        }
+      }
+
+      @include respond(tab-port) {
+        margin-right: 3rem;
+      }
+
+      &:hover {
+        border-bottom: 2px solid $color-primary;
+        transition: 0.2s ease-in;
+      }
+    }
+    .list-active {
+      border-bottom: 2px solid $color-primary;
+    }
+  }
+
+  // PANELS
+  &__panels {
+    .panel {
+      display: none;
+      grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+      grid-column-gap: 4rem;
+      grid-row-gap: 5rem;
+
+      &__left {
+        width: 100%;
+        height: 100%;
+
+        .buttons {
+          margin-top: 4rem;
+          height: 5rem;
+        }
+
+        // space
+        img {
+          width: 100%;
+          margin-top: 2rem;
+        }
+      }
+
+      &__right {
+        width: 100%;
+        height: 100%;
+        // workplace
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &__form {
+        width: 100%;
+        height: 100%;
+
+        .input-box {
+          position: relative;
+          &:not(:last-child) {
+            margin-bottom: 1.5rem;
+          }
+
+          .msg-err {
+            position: absolute;
+            top: 0.5rem;
+            right: 1rem;
+            color: $color-red-dark;
+            // display: none;
+          }
+
+          .input-form {
+            display: block;
+            width: 100%;
+            padding: 1.8rem;
+            background-color: $color-grey-light;
+            border: none;
+            border-radius: 3px;
+            outline: none;
+
+            &::placeholder {
+              font-size: 1.5rem;
+              color: $color-grey;
+            }
+          }
+          .error {
+            // outline: 1px solid $color-red-dark;
+            box-shadow: 0 0 0 1px $color-red-dark;
+          }
+
+          .error-succ {
+            box-shadow: 0 0 0 1px $color-green;
+          }
+
+          #text-area {
+            resize: none;
+          }
+        }
+        /* &--button {
+          margin-top: 1rem;
+        } */
+      }
+    }
+
+    &--title {
+      font-size: 2rem;
+      letter-spacing: 0.5;
+      margin-bottom: 2rem;
+    }
+
+    &--text {
+      font-family: monospace;
+      font-size: 2rem;
+    }
+
+    .active {
+      display: grid;
+    }
+  }
+}

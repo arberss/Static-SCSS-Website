@@ -1,0 +1,39 @@
+.footer {
+  padding: 10rem 8rem;
+  background-color: $color-black;
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  grid-auto-flow: row; /* NEW */
+  grid-gap: 5rem;
+  transform: scaleY(-1); /* straighten the grid item */
+
+  & > div {
+    transform: scaleY(-1); /* straighten the grid item */
+  }
+
+  .nav__menu__logo {
+    &--text {
+      color: $color-white;
+    }
+  }
+
+  &__copyright {
+    color: $color-white;
+    font-size: 1.5rem;
+    line-height: 1.5;
+
+    span {
+      display: block;
+      margin-left: 6rem;
+
+      @include respond(phone) {
+        margin: 0;
+      }
+    }
+    #date {
+      display: inline-block;
+    }
+  }
+}
